@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEAM5170 Group 33 Final Project</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --card: #1f2937;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-2: #a855f7;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.08), transparent 25%), radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.08), transparent 20%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #7dd3fc; }
+    header {
+      padding: 48px 16px 32px;
+      text-align: center;
+    }
+    .container { width: min(1100px, 92vw); margin: 0 auto 64px; }
+    .title {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 700;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 auto;
+      max-width: 720px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    .muted { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--text);
+      background: linear-gradient(120deg, rgba(56, 189, 248, 0.18), rgba(168, 85, 247, 0.16));
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    section { margin-top: 40px; }
+    section h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+    .embed {
+      margin-top: 12px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+    }
+    iframe, object {
+      width: 100%;
+      height: 720px;
+      border: 0;
+      display: block;
+      background: #0b1220;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px 16px 48px;
+      font-size: 14px;
+    }
+    @media (max-width: 640px) {
+      iframe, object { height: 520px; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="pill">MEAM5170 • Group 33</div>
+    <h1 class="title">Neural Safe Planning for Letters Trajectory Tracking</h1>
+    <p class="subtitle">
+      Final project assets: full report, poster, and comparison plots for letters A/L/O/R/T,
+      trajectory comparisons, and neural safe planning benchmark results.
+    </p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Key Deliverables</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project Report</h3>
+          <p class="muted">Complete write-up of methods, experiments, and conclusions.</p>
+          <div class="actions">
+            <a class="btn" href="report.pdf" target="_blank" rel="noopener">View PDF</a>
+            <a class="btn secondary" href="report.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Poster</h3>
+          <p class="muted">Concise visual summary of the project.</p>
+          <div class="actions">
+            <a class="btn" href="poster.pdf" target="_blank" rel="noopener">View PDF</a>
+            <a class="btn secondary" href="poster.pdf" download>Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Report Preview</h2>
+      <p class="muted">Inline preview (open in new tab for full fidelity if your browser blocks PDF embedding).</p>
+      <div class="embed">
+        <object data="report.pdf" type="application/pdf">
+          <p style="padding:16px;color:var(--muted);">PDF 预览不可用，请 <a href="report.pdf" target="_blank" rel="noopener">点击这里</a> 打开。</p>
+        </object>
+      </div>
+    </section>
+
+    <section>
+      <h2>Visual Comparisons & Benchmarks</h2>
+      <p class="muted">All plots are provided as PDF files for clarity.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Letter A</h3>
+          <p class="muted">Trajectory tracking comparison.</p>
+          <div class="actions">
+            <a class="btn secondary" href="letter_A_comparison.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Letter L</h3>
+          <p class="muted">Trajectory tracking comparison.</p>
+          <div class="actions">
+            <a class="btn secondary" href="letter_L_comparison.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Letter O</h3>
+          <p class="muted">Trajectory tracking comparison.</p>
+          <div class="actions">
+            <a class="btn secondary" href="letter_O_comparison.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Letter R</h3>
+          <p class="muted">Trajectory tracking comparison.</p>
+          <div class="actions">
+            <a class="btn secondary" href="letter_R_comparison.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Letter T</h3>
+          <p class="muted">Trajectory tracking comparison.</p>
+          <div class="actions">
+            <a class="btn secondary" href="letter_T_comparison.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Trajectory Comparison</h3>
+          <p class="muted">Overall trajectory performance summary.</p>
+          <div class="actions">
+            <a class="btn secondary" href="trajectory_comparison.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Neural Safe Planning Benchmark</h3>
+          <p class="muted">Benchmark plots and analysis.</p>
+          <div class="actions">
+            <a class="btn secondary" href="neural_safe_planning_benchmark.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built for MEAM5170 Group 33 — GitHub Pages ready.
+  </footer>
+</body>
+</html>
+
